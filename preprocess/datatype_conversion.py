@@ -12,5 +12,5 @@ def DatatypeConversion(spark_df, data_types):
                 spark_df = spark_df.select("*", from_unixtime(unix_timestamp(value, 'MM-dd-yyyy hh:mm:ss')).alias('date'))
                 spark_df = spark_df.drop(value)
     except Exception as e:
-        print("Error occured in DatatypeConversion() with Exception as ",e)
+        print("Error occured in DatatypeConversion() with Exception as ravann ",e)
     return spark_df
